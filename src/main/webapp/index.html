@@ -1,0 +1,28 @@
+<html>
+<body>
+<h1>Hello World!</h1>
+<ul>
+    <li><a href="example/hello">MainController.hello()</a></li>
+</ul>
+<h2>GET Form</h2>
+<form action="example/form" method="GET">
+    Name: <input type="text" name="name" value="Hilde">
+    <input type="submit">
+</form>
+
+<h2>POST Form</h2>
+<form action="example/form" method="POST">
+    Name: <input type="text" name="name" value="Hans">
+    <input type="submit">
+</form>
+
+<h2>POST Form enctype="multipart/form-data"</h2>
+<form action="example/form/multipart" method="POST" enctype="multipart/form-data">
+    Name: <input type="text" name="name" value="Hildegard"><br>
+    File: <input type="file" name="file">
+    <input type="submit">
+</form>
+
+
+</body>
+</html>
