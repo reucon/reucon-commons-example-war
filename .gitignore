@@ -7,3 +7,4 @@ target
 .project
 atlassian-ide-plugin.xml
 .settings/*
+/src/main/webapp/META-INF/context.xml
