@@ -8,15 +8,21 @@ import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
-public class ExampleWebApplicationInitializer implements WebApplicationInitializer {
+public class ExampleWebApplicationInitializer implements WebApplicationInitializer
+{
     @Override
-    public void onStartup(ServletContext container) {
+    public void onStartup(ServletContext container)
+    {
         final AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
         applicationContext.register(ExampleWebConfig.class);
+        
         final DispatcherServlet dispatcherServlet = new DispatcherServlet(applicationContext);
         final ServletRegistration.Dynamic registration = container.addServlet("dispatcher", dispatcherServlet);
         registration.setMultipartConfig(new MultipartConfigElement(""));
         registration.setLoadOnStartup(1);
         registration.addMapping("/example/*");
+        
+        // https://java.net/jira/browse/SERVLET_SPEC-50
+        applicationContext.register(ExceptionHandlingControllerAdvice.class);
     }
 }
