@@ -12,7 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 public class ExampleWebConfig extends WebMvcConfigurerAdapter
 {
-
     @Bean
     public ExceptionReportGenerator exceptionReportGenerator()
     {
