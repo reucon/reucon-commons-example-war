@@ -14,7 +14,7 @@ public class ExampleWebApplicationInitializer implements WebApplicationInitializ
     @Override
     public void onStartup(ServletContext container)
     {
-        container.addFilter("wrapper",  InputStreamPreservingRequestFilter.class);
+        container.addFilter("wrapper",  InputStreamPreservingRequestFilter.class).addMappingForUrlPatterns(null, false, "/*");
         
         final AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
         applicationContext.register(ExampleWebConfig.class);
