@@ -5,7 +5,7 @@
     <artifactId>reucon-commons-example-war</artifactId>
     <packaging>war</packaging>
     <name>reucon commons example war</name>
-    <version>2.2.0.CI-SNAPSHOT</version>
+    <version>2.2.7.CI-SNAPSHOT</version>
     <url>https://github.com/reucon/reucon-commons-example-war</url>
     <licenses>
         <license>
